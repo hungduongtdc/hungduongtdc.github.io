@@ -10,6 +10,7 @@
       src="https://d.la2-c1cs-hnd.salesforceliveagent.com/content/g/js/44.0/deployment.js"
     ></script>
     <script type="text/javascript">
+      window.name = "saleforce-chat-bot";
       liveagent.init(
         "https://d.la2-c1cs-hnd.salesforceliveagent.com/chat",
         "5720o000000gBAi",
@@ -40,6 +41,9 @@
           document.getElementById("liveagent_button_offline_5730o000000gBLq")
         );
       });
+      setTimeout(() => {
+        liveagent.startChatWithWindow("5730o000000gBLq", "saleforce-chat-bot");
+      }, 500);
     </script>
   </body>
 </html>
