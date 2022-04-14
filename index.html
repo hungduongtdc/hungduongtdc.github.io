@@ -4,6 +4,7 @@
     <title>Slaeforce Chatbot intergration</title>
   </head>
   <body>
+    <iframe name="myiframe"></iframe>
     <!-- <script src="saleforce.js"></script> -->
     <script
       type="text/javascript"
@@ -17,13 +18,13 @@
         "00D0T0000008lP8"
       );
     </script>
-    <a
+    <!-- <a
       id="liveagent_button_online_5730o000000gBLq"
       href="javascript://Chat"
       onclick="liveagent.startChat('5730o000000gBLq')"
       style="font-size: 24px; text-decoration: none"
       >Start chat</a
-    >
+    > -->
     <div id="liveagent_button_offline_5730o000000gBLq" style="display: none">
       <!-- Offline Chat Content -->
     </div>
@@ -42,7 +43,7 @@
         );
       });
       setTimeout(() => {
-        liveagent.startChatWithWindow("5730o000000gBLq", "saleforce-chat-bot");
+        liveagent.startChatWithWindow("5730o000000gBLq", "myiframe");
       }, 500);
     </script>
   </body>
