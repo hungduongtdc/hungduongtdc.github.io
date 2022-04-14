@@ -3,7 +3,33 @@
   <head>
     <title>Slaeforce Chatbot intergration</title>
   </head>
+  <style>
+    .embed-container {
+      position: relative;
+      padding-bottom: 70.75%;
+      height: 0;
+      overflow: hidden;
+    }
+    .embed-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
   <body>
+    <div class="embed-container">
+      <iframe
+        name="myiframe"
+        frameborder="0"
+        allowfullscreen=""
+        webkitallowfullscreen="true"
+        mozallowfullscreen="true"
+        oallowfullscreen="true"
+        msallowfullscreen="true"
+      ></iframe>
+    </div>
     <!-- <script src="saleforce.js"></script> -->
     <script
       type="text/javascript"
@@ -42,7 +68,7 @@
         );
       });
       setTimeout(() => {
-        liveagent.startChatWithWindow("5730o000000gBLq", "saleforce-chat-bot");
+        liveagent.startChatWithWindow("5730o000000gBLq", "myiframe");
       }, 500);
     </script>
   </body>
